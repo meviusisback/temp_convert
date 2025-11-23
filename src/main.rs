@@ -9,12 +9,12 @@ fn main() {
         println!("You picked 1\n");
         let celsius = temp_input("Celsius");
         let cel_to_fahr = celsius * 1.8 + 32.0;
-        println!("La temperatura in Fahrenheit è di {:.2}", cel_to_fahr);
+        println!("The temperature in Fahrenheit is {:.2}", cel_to_fahr);
     } else {
         println!("You picked 2\n");
         let fahrenheit = temp_input("Fahrenheit");
         let fahr_to_cel = (fahrenheit - 32.0) / 1.8;
-        println!("La temperatura in Celsius è di {:.2}", fahr_to_cel);
+        println!("The temperature in Celsius is {:.2}", fahr_to_cel);
     }
 }
 
@@ -41,7 +41,7 @@ fn conversion_input() -> u8 {
 fn temp_input(format: &str) -> f32 {
     loop {
         let mut temperature = String::new();
-        println!("Inserisci la temperatura in {format}");
+        println!("Enter the temperature in {format}");
         io::stdin()
             .read_line(&mut temperature)
             .expect("Failed to read the line");
